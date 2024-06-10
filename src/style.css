@@ -61,6 +61,7 @@ footer a:hover {
   font-size: 24px;
   text-align: center;
   padding: 15px 5px;
+  
 }
 
 .time span {
@@ -69,6 +70,7 @@ footer a:hover {
   border-radius: 5px;
   display: inline-block;
   width: 5.5vh;
+  margin: 6px;
 }
 
 .time span:last-of-type {
