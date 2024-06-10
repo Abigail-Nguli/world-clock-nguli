@@ -2,6 +2,13 @@ body {
   background-color: rgb(201, 200, 200);
 }
 
+h1{
+    font-size: 36px;
+    text-align: center;
+    padding: 14px;
+    color: #560303;
+}
+
 select {
   font-size: 18px;
   width: 100%;
