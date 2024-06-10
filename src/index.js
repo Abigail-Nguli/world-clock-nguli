@@ -1,12 +1,12 @@
 function updateDate() {
-  //Nairobi
-  let nairobiDate = document.querySelector("#nairobi-date");
-  if (nairobiDate) {
-    let nairobiTimeZone = moment().tz("Africa/Nairobi");
-    nairobiDate.innerHTML = nairobiTimeZone.format("dddd, Mo MMMM, YYYY");
+  //Arusha
+  let arushaDate = document.querySelector("#arusha-date");
+  if (arushaDate) {
+    let arushaTimeZone = moment().tz("Africa/arusha");
+    arushaDate.innerHTML = arushaTimeZone.format("dddd, Mo MMMM, YYYY");
 
-    let nairobiTime = document.querySelector("#nairobi-time");
-    nairobiTime.innerHTML = nairobiTimeZone.format(
+    let arushaTime = document.querySelector("#arusha-time");
+    arushaTime.innerHTML = arushaTimeZone.format(
       "[<span>]hh[</span>]:[</span>][<span>]mm[</span>]:[<span>]ss[</span>] [<span>]A[</span>]"
     );
   }
@@ -26,9 +26,15 @@ function updateDate() {
 
 function chooseCity(event) {
   let selectedCity = event.target.value;
+  let cityTimeZone = moment().tz(selectedCity);
+
+  if (selectedCity === "current") {
+    selectedCity = moment.tz.guess();
+  }
+
   let cityElement = selectedCity.split("/")[1];
   let city = document.querySelector("#city");
-  let cityTimeZone = moment().tz(selectedCity);
+
   let cityDate = cityTimeZone.format("dddd, Mo MMMM, YYYY");
   let cityTime = cityTimeZone.format(
     "[<span>]hh[</span>]:[</span>][<span>]mm[</span>]:[<span>]ss[</span>] [<span>]A[</span>]"
