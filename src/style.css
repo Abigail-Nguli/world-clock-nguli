@@ -1,5 +1,5 @@
 body {
-  background-color: rgb(201, 200, 200);
+  background-color: #d9e8cf;
 }
 
 h1{
@@ -38,7 +38,7 @@ footer a:hover {
 }
 
 .container {
-  background-color: #e9e6e6;
+  background-color: #b3c1ab;
   display: block;
   margin: 120px auto 0 auto;
   max-width: 680px;
