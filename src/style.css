@@ -31,7 +31,7 @@ footer a:hover {
 .container {
   background-color: #e9e6e6;
   display: block;
-  margin: 0 auto;
+  margin: 120px auto 0 auto;
   max-width: 680px;
   border-radius: 12px;
   padding: 10px;
