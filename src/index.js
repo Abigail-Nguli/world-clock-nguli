@@ -14,7 +14,7 @@ function updateDate() {
   //Jamaica
   let jamaicaDate = document.querySelector("#jamaica-date");
   if (jamaicaDate) {
-    let jamaicaTimeZone = moment().tz("America/Jamaica");
+    let jamaicaTimeZone = moment().tz("America/jamaica");
     jamaicaDate.innerHTML = jamaicaTimeZone.format("dddd, Mo MMMM, YYYY");
 
     let jamaicaTime = document.querySelector("#jamaica-time");
@@ -22,6 +22,19 @@ function updateDate() {
       "[<span>]hh[</span>]:[</span>][<span>]mm[</span>]:[<span>]ss[</span>] [<span>]A[</span>]"
     );
   }
+
+  //Vienna
+  let viennaDate = document.querySelector("#vienna-date");
+  if (viennaDate) {
+    let viennaTimeZone = moment().tz("Europe/Vienna");
+    viennaDate.innerHTML = viennaTimeZone.format("dddd, Mo MMMM, YYYY");
+
+    let viennaTime = document.querySelector("#vienna-time");
+    viennaTime.innerHTML = viennaTimeZone.format(
+      "[<span>]hh[</span>]:[</span>][<span>]mm[</span>]:[<span>]ss[</span>] [<span>]A[</span>]"
+    );
+  }
+
 }
 
 function chooseCity(event) {
@@ -48,6 +61,7 @@ function chooseCity(event) {
         </div>
         <div class="time"">${cityTime}</div>
     </div>
+    <a href="/"> Back to All Cities</a>
     `;
 }
 
@@ -56,3 +70,16 @@ selectCity.addEventListener("change", chooseCity);
 
 updateDate();
 setInterval(updateDate, 1000);
+
+function addCity(){
+    let jamaicaDate = document.querySelector("#jamaica-date");
+    if (jamaicaDate) {
+      let jamaicaTimeZone = moment().tz("Europe/jamaica");
+      jamaicaDate.innerHTML = jamaicaTimeZone.format("dddd, Mo MMMM, YYYY");
+
+      let jamaicaTime = document.querySelector("#jamaica-time");
+      jamaicaTime.innerHTML = jamaicaTimeZone.format(
+        "[<span>]hh[</span>]:[</span>][<span>]mm[</span>]:[<span>]ss[</span>] [<span>]A[</span>]"
+      );
+    }
+}
