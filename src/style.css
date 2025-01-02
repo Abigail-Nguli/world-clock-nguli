@@ -108,4 +108,9 @@ footer a:hover {
     padding: 12px;
     margin: 14px 8px;
   }
+
+  footer {
+  font-size: 15px;
+  padding: 15px;
+}
 }
